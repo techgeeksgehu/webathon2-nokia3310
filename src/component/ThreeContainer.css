@@ -1,0 +1,23 @@
+.three_containers_div{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.threeContainers{
+    transition: 0.3s;
+    background-color: #62ade0;
+}
+
+.threeContainers:hover{
+    transition: transform 0.3s ease-out;
+  transform: translateY(-30px);
+}
+
+@media (max-width: 768px){
+    .three_containers_div{
+        display: flex;
+        flex-direction: column;
+    }
+}

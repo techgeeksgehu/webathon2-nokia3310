@@ -1,0 +1,268 @@
+.navigation {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  padding: 0.5rem 0rem;
+  background-color: #eaeaea;
+  color: black;
+  box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+  opacity: 0.8;
+}
+
+img{
+  width: 100px;
+  height: 100px;
+}
+
+.brand-name {
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+  margin-left: 1rem;
+}
+.navigation-menu {
+  margin-left: auto;
+}
+
+.navigation-menu ul {
+  display: flex;
+  padding: 0;
+}
+.navigation-menu li {
+  list-style-type: none;
+  margin: 0 1rem;
+}
+.navigation-menu li a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.toggleButton {
+
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.menu-outline{
+  width: 1.5em;
+  height: 1.5em;
+}
+@media screen and (max-width: 768px) {
+
+  .toggleButton {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navigation-menu ul {
+    display: none;
+    left: -150px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navigation-menu.expanded ul {
+    display: block;
+  }
+  .navigation {
+      position: relative;
+    }
+    
+    .navigation-menu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      z-index: 999;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      border: 1px solid #ddd;
+      padding: 10px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease-in-out;
+      border-radius: 10px;
+    }
+    
+    .navigation-menu.expanded {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .navigation-menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .navigation-menu li {
+      margin: 0;
+      padding: 5px 0;
+    }
+    
+    .navigation-menu a {
+      display: block;
+      padding: 5px;
+      text-decoration: none;
+      color: #333;
+    }
+    
+    .navigation-menu a:hover {
+      background-color: #f5f5f5;
+    }
+    
+}
+.dropdown-container {
+position: relative;
+display: block;
+}
+
+.dropdown-button {
+background-color: #4caf50;
+border-radius: 10px;
+color: white;
+padding: 12px;
+font-size: 16px;
+border: none;
+cursor: pointer;
+width: 100%;
+text-align: left;
+outline: none;
+}
+
+.dropdown-button:hover,
+.dropdown-button:focus {
+background-color: #3e8e41;
+}
+
+.navigation-menu{
+position: relative;
+}
+.dropdown-menu {
+position: absolute;
+top: 100%;
+transition: opacity 0.5s ease-in-out;
+z-index: 1;
+padding: 0;
+margin: 0;
+margin-right: 100px;
+overflow-y: hidden;
+overflow-x: hidden;
+list-style: none;
+background-color: #f9f9f9;
+border: 1px solid #ddd;
+min-width: 160px;
+max-width: calc(100vw - 10px);
+max-height: 200px;
+overflow-y: auto;
+display: flex;
+flex-direction: column;
+}
+
+.dropdown-menu li {
+padding: 12px;
+cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+background-color: #f1f1f1;
+}
+
+.dropdown-container:hover .dropdown-menu {
+display: block;
+}
+
+@media screen and (max-width: 600px) {
+.dropdown-menu {
+  max-width: none;
+  width: 100%;
+}
+}
+.dropdown-menu {
+border-radius: 10px;
+position: absolute;
+overflow-y: hidden;
+top: 100%;
+left: 0;
+margin-right: 100px;
+z-index: 1;
+padding: 0;
+margin: 0;
+list-style: none;
+background-color: rgb(136, 51, 233);
+border: 1px solid #686363;
+min-width: 300px;
+max-width: 300px;
+max-height: 200px;
+overflow-y: auto;
+display: none;
+transition: opacity 0.5s ease-in-out;
+}
+
+.dropdown-menu>li{
+border-radius: 10px;
+color: white;
+}
+
+.dropdown-menu>li:hover{
+color: black;
+}
+
+.button{
+margin-top: 9px;
+font-size: 16px;
+color: black;
+font-weight: 700;
+padding-left: 5px;
+border-style: none;
+background: none;
+}
+
+@media(max-width: 600px){
+.button{
+ margin-right: 20px;
+ margin-left: 20px;
+}
+}
+
+.about-us-button{
+  color: black
+}
+
+
+.about-us-button:hover{
+  color: white;
+}
+.button:hover{
+background-color: red;
+padding: 10px 15px;
+font-family: 'Baloo Bhai', cursive;
+border: 4px solid white;
+color: white;
+margin: 1px;
+font-size:1rem;
+border-radius: 10px;
+cursor: pointer;
+text-decoration: none;
+transition: 0.5s;
+}
+
+@media(min-width: 300px){
+.navigation{
+  position: fixed;
+}
+}
+
+@media(max-width: 475px){
+.college_name{
+  max-width: 200px;
+}
+}

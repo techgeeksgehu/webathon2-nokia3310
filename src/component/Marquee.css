@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.marquee-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100vw;
+    height: 150px;
+    position: relative;
+    transform: rotate(-5deg);
+    margin: 50px 0;
+    background-color: red;
+    color: white;
+}
+
+.marquee-text {
+
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 25s linear infinite;
+    font-size: 100px;
+    color: white
+}
+.marquee-text::after {
+    content: "TBI GEHU - Incubating your dreams into reality";
+    padding-left: 50px;
+}
+
+
+.marquee-container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100vw;
+    height: 150px;
+    position: inherit;
+    transform: rotate(5deg);
+    margin: 50px 0;
+    background-color: red;
+    color: white;
+    direction: ltr;
+}
+
+.marquee-text2 {
+
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 25s linear infinite;
+    font-size: 100px;
+    color: white
+}
+@keyframes marquee {
+    from {
+        transform: translateX(100vw);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
